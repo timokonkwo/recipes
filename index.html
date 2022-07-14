@@ -15,19 +15,20 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Recipes</a>
+            <a class="navbar-brand" href="#">Recipe Archive</a>
         </div>
     </nav>
 
     <div class="container">
         <div class="card bg-light mb-3 mt-3 mx-auto" style="max-width: 30rem;">
-            <div class="card-header">Save your favourite recipe</div>
+            <div class="card-header">Fav Recipe</div>
 
             <div class="card-body">
+                <p class="card-text">Easily add, edit and save your favourite recipes.</p>
                 <!-- Form name -->
                 <form>
                     <div class="form-group has-success">
-                        <label class="form-label mt-4">Name</label>
+                        <label class="form-label mt-2">Name</label>
                         <input type="text" placeholder="recipe name" class="form-control shadow-none">
                     </div>
                     <!-- Form author -->
@@ -41,7 +42,9 @@
                         <textarea class="form-control shadow-none" id="textarea" placeholder="comments" rows="3"></textarea>
                     </div>
 
-                    <button type="button" class="btn btn-primary rounded shadow-none mt-4">Submit</button>
+                    <button type="button" class="btn btn-primary rounded shadow-none mt-4">Add Recipe</button>
+
+                    <button type="button" class="btn btn-info rounded shadow-none mt-4 float-end">View Saved Recipes</button>
                 </form>
             </div>
         </div>
