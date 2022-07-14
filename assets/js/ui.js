@@ -1,3 +1,41 @@
+class UI {
+    constructor() {
+        this.recipeTitleInput = document.querySelector('#recipe-title');
+        this.recipeAuthorInput = document.querySelector('#recipe-author');
+        this.recipeStepsInput = document.querySelector('#recipe-steps');
+        this.addRecipeBtn = document.querySelector('#add-recipe-btn');
+        this.viewRecipesBtn = document.querySelector('#view-recipes-btn');
+    }
+
+    validate(item, cls) {
+        if (cls === 'is-valid') {
+            item.classList.remove('is-invalid')
+            item.classList.add('is-valid')
+        } else {
+            item.classList.remove('is-valid')
+            item.classList.add('is-invalid')
+        }
+    }
+}
+
+
+const ui = new UI();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Saved Recipes state
         <div class="card bg-light mb-3 mt-3 mx-auto" style="max-width: 30rem;">
             <div class="card-header">Saved Recipes</div>
