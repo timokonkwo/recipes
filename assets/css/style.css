@@ -1,5 +1,7 @@
-.btn:focus,
-a:focus,
-input:focus {
-    outline: none !important;
+.delete {
+    color: red !important;
+}
+
+a {
+    text-decoration: none !important;
 }
