@@ -1,0 +1,5 @@
+.btn:focus,
+a:focus,
+input:focus {
+    outline: none !important;
+}

@@ -8,15 +8,44 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Database | Firebase</title>
+    <title>Recipe App</title>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Recipes</a>
+        </div>
+    </nav>
+
     <div class="container">
-        <nav class="navbar">
-            <a href="#" class="navbar-brand">Recipes</a>
-        </nav>
+        <div class="card bg-light mb-3 mt-3 mx-auto" style="max-width: 30rem;">
+            <div class="card-header">Save your favourite recipe</div>
+
+            <div class="card-body">
+                <!-- Form name -->
+                <form>
+                    <div class="form-group has-success">
+                        <label class="form-label mt-4">Name</label>
+                        <input type="text" placeholder="recipe name" class="form-control shadow-none">
+                    </div>
+                    <!-- Form author -->
+                    <div class="form-group has-success">
+                        <label class="form-label mt-4" for="inputValid">Author</label>
+                        <input type="text" placeholder="your name" class="form-control is-valid shadow-none" id="inputValid">
+                    </div>
+                    <!-- Form comments -->
+                    <div class="form-group">
+                        <label for="textarea" class="form-label mt-4">Recipe steps (optional)</label>
+                        <textarea class="form-control shadow-none" id="textarea" placeholder="comments" rows="3"></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary rounded shadow-none mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 
