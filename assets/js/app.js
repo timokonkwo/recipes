@@ -9,7 +9,7 @@ class Recipe {
         /* Validate inputs on key press */
         const inputEventItems = [ui.recipeTitleInput, ui.recipeAuthorInput, ui.recipeStepsInput];
         inputEventItems.forEach(item => item.addEventListener('keyup', (e) => {
-            if (item.value) {
+            if (item.value.length > 2) {
                 ui.validate(item, 'is-valid');
             } else {
                 ui.validate(item, 'is-invalid');
