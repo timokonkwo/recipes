@@ -23,7 +23,10 @@ class UI {
 
     toast(title) {
         document.querySelector('.toast-title').textContent = title;
-        document.querySelector('.toast').classList.add('show');
+        const toast = document.querySelector('.toast')
+        toast.classList.add('show');
+
+        setTimeout(() => toast.classList.remove('show'), 2000)
     }
 }
 
