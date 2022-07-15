@@ -7,13 +7,16 @@ class UI {
         this.viewRecipesBtn = document.querySelector('#view-recipes-btn');
     }
 
+    /* Function to validate inputs */
     validate(item, cls) {
         if (cls === 'is-valid') {
-            item.classList.remove('is-invalid')
-            item.classList.add('is-valid')
+            item.classList.remove('is-invalid');
+            item.classList.add('is-valid');
+            return true;
         } else {
-            item.classList.remove('is-valid')
-            item.classList.add('is-invalid')
+            item.classList.remove('is-valid');
+            item.classList.add('is-invalid');
+            return false;
         }
     }
 }
