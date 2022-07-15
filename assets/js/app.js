@@ -37,8 +37,9 @@ class RecipeApp {
                 author = ui.recipeAuthorInput.value,
                 steps = ui.recipeStepsInput.value;
             const newRecipe = new Recipe(title, author, steps);
-            // this.data.push(newRecipe);
-            console.log(this.items)
+
+            /* Send a toast in UI */
+            ui.toast(title);
         } else {
             /* Add invalid class to the fields not yet validated */
             const fields = document.querySelectorAll('.field');

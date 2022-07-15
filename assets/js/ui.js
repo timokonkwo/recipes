@@ -20,6 +20,11 @@ class UI {
             item.classList.add('is-invalid');
         }
     }
+
+    toast(title) {
+        document.querySelector('.toast-title').textContent = title;
+        document.querySelector('.toast').classList.add('show');
+    }
 }
 
 

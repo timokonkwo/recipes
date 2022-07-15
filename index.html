@@ -25,7 +25,9 @@
 
             <div class="card-body">
                 <p class="card-text">Easily add, edit and save your favourite recipes.</p>
-                <!-- Form name -->
+
+
+                <!-- Form -->
                 <form>
                     <div class="form-group has-success">
                         <label class="form-label mt-2" for="recipe-title">Title</label>
@@ -42,12 +44,27 @@
                         <textarea class="form-control shadow-none field" id="recipe-steps" placeholder="comments" rows="3"></textarea>
                     </div>
 
+
                     <button type="button" id="add-recipe-btn" class="btn btn-primary rounded shadow-none mt-4 align-middle"> <i class="fa fa-plus"></i> Add Recipe</button>
 
                     <button type="button" id="view-recipes-btn" class="btn btn-info rounded shadow-none mt-4 float-end align-middle"><i class="fa fa-inbox"></i> Saved Recipes</button>
+
+                    <!-- Toast start -->
+                    <div class="toast fade position-fixed mx-auto mt-5" role="alert" aria-live="assertive" style="z-index: 11" aria-atomic="true">
+                        <div class="d-flex">
+                            <div class="toast-body mx-auto">
+                                <span class="toast-title"></span> added!
+                            </div>
+                            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <!-- Toast end -->
                 </form>
+
             </div>
         </div>
+
+        <!-- container ends -->
     </div>
 </body>
 
