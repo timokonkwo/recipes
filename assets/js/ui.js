@@ -28,6 +28,12 @@ class UI {
 
         setTimeout(() => toast.classList.remove('show'), 2000)
     }
+
+    clearInput() {
+        this.recipeTitleInput.value = '';
+        this.recipeAuthorInput.value = '';
+        this.recipeStepsInput.value = '';
+    }
 }
 
 

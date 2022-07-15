@@ -6,5 +6,8 @@
 saveRecipe = recipe => {
 
     db.collection('recipes').add(recipe)
-        .then(() => ui.toast(recipe.title));
+        .then(() => {
+            ui.toast(recipe.title);
+            ui.clearInput();
+        });
 }
