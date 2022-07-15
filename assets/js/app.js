@@ -43,12 +43,9 @@ class RecipeApp {
             const created_at = firebase.firestore.Timestamp.fromDate(now);
 
             /* new Recipe Object */
-            const newRecipe = new Recipe(title, author, steps, created_at);
-            console.log(newRecipe);
+            const newRecipe = { title, author, steps, created_at };
+            saveRecipe(newRecipe);
 
-
-            /* Send a toast in UI */
-            ui.toast(title);
         } else {
             /* Add invalid class to the fields not yet validated */
             const fields = document.querySelectorAll('.field');
