@@ -12,11 +12,12 @@ class UI {
         if (cls === 'is-valid') {
             item.classList.remove('is-invalid');
             item.classList.add('is-valid');
-            return true;
+        } else if (cls === 'null') {
+            item.classList.remove('is-invalid');
+            item.classList.remove('is-valid');
         } else {
             item.classList.remove('is-valid');
             item.classList.add('is-invalid');
-            return false;
         }
     }
 }
