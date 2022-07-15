@@ -1,9 +1,10 @@
 class Recipe {
     /* Item Constructor for the recipes */
-    constructor(title, author, steps) {
+    constructor(title, author, steps, created_at) {
         this.title = title;
         this.author = author;
         this.steps = steps;
+        this.created_at = created_at;
     }
 
 }
@@ -36,7 +37,15 @@ class RecipeApp {
             const title = ui.recipeTitleInput.value,
                 author = ui.recipeAuthorInput.value,
                 steps = ui.recipeStepsInput.value;
-            const newRecipe = new Recipe(title, author, steps);
+
+            /* Get current date */
+            const now = new Date();
+            const created_at = firebase.firestore.Timestamp.fromDate(now);
+
+            /* new Recipe Object */
+            const newRecipe = new Recipe(title, author, steps, created_at);
+            console.log(newRecipe);
+
 
             /* Send a toast in UI */
             ui.toast(title);
