@@ -46,6 +46,9 @@ class RecipeApp {
             const newRecipe = { title, author, steps, created_at };
             saveRecipe(newRecipe);
 
+            /* Turn on spinner */
+            ui.spinner('on');
+
         } else {
             /* Add invalid class to the fields not yet validated */
             const fields = document.querySelectorAll('.field');

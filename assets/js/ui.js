@@ -29,10 +29,19 @@ class UI {
         setTimeout(() => toast.classList.remove('show'), 2000)
     }
 
+    spinner(val) {
+        if (val === 'on') {
+            document.querySelector('.spinner').classList.remove('d-none');
+        } else {
+            document.querySelector('.spinner').classList.add('d-none');
+        }
+    }
+
     clearInput() {
         this.recipeTitleInput.value = '';
         this.recipeAuthorInput.value = '';
         this.recipeStepsInput.value = '';
+        document.querySelector('form').reset();
     }
 }
 
