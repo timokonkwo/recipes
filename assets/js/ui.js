@@ -63,7 +63,9 @@ const ui = new UI();
 
 
 
-/* Saved Recipes state
+/* Saved Recipes state */
+
+const saved = `
         <div class="card bg-light mb-3 mt-3 mx-auto" style="max-width: 30rem;">
             <div class="card-header">Saved Recipes</div>
 
@@ -87,11 +89,11 @@ const ui = new UI();
                                 </div>
 
 
-                                <a href="#" class="edit card-link" data-id="${post.id}">
+                                <a href="#" class="edit card-link" data-id="">
                                     <i class="fa fa-pencil"></i>
                                 </a>
 
-                                <a href="#" class="delete card-link" data-id="${post.id}">
+                                <a href="#" class="delete card-link" data-id="">
                                     <i class="fa fa-remove"></i>
                                 </a>
                             </div>
@@ -104,6 +106,6 @@ const ui = new UI();
                     </form>
                 </div>
             </div>
-        </div>
+        </div>`
 
-        */
+// document.querySelector('.container').innerHTML = saved;

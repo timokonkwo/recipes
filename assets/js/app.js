@@ -1,18 +1,6 @@
-class Recipe {
-    /* Item Constructor for the recipes */
-    constructor(title, author, steps, created_at) {
-        this.title = title;
-        this.author = author;
-        this.steps = steps;
-        this.created_at = created_at;
-    }
-
-}
-
-
 class RecipeApp {
     constructor() {
-        this.data = [];
+        this.state = 'add';
     }
 
 
@@ -30,6 +18,7 @@ class RecipeApp {
     }
 
     addRecipe(e) {
+        e.preventDefault();
         /* Get all validated classes and check if all the fields have been validated */
         const validate = document.querySelectorAll('.is-valid').length;
         if (validate >= 3) {
@@ -58,7 +47,10 @@ class RecipeApp {
                 }
             })
         }
-        e.preventDefault();
+    }
+
+    viewSavedRecipes() {
+
     }
 
     /* App Initializer */
@@ -67,7 +59,10 @@ class RecipeApp {
         const inputEventItems = [ui.recipeTitleInput, ui.recipeAuthorInput, ui.recipeStepsInput];
         inputEventItems.forEach(item => item.addEventListener('keyup', () => this.validateInput(item)));
 
+        /* Listen for Add button click */
         ui.addRecipeBtn.addEventListener('click', this.addRecipe);
+        /* Listen for view recipes button click */
+        ui.viewRecipesBtn.addEventListener('click', this.viewSavedRecipes);
     }
 }
 

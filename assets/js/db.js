@@ -4,7 +4,6 @@
 //     });
 
 saveRecipe = recipe => {
-
     db.collection('recipes').add(recipe)
         .then(() => {
             ui.clearInput();
