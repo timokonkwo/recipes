@@ -6,7 +6,6 @@ const getRecipes = () => {
             ui.changeState('recipes');
             ui.spinner('off');
             ui.showRecipes(snapshot.docs);
-            // .forEach((recipesResponse, id) => ui.showRecipes(recipesResponse.data(), id));
         });
 }
 

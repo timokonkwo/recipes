@@ -77,9 +77,9 @@ class UI {
     showRecipes(response) {
         let html = '';
 
-        response.forEach((docs, id) => {
+        response.forEach((docs) => {
             const recipe = docs.data();
-
+            const id = docs.id;
 
             /* HTML Template */
             html += `
