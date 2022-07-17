@@ -3,7 +3,6 @@ class RecipeApp {
         this.state = 'add';
     }
 
-
     validateInput(item) {
         /* Check if user entered a valid text */
         if (item.value.length > 2) {
@@ -49,10 +48,6 @@ class RecipeApp {
         }
     }
 
-    viewSavedRecipes() {
-
-    }
-
     /* App Initializer */
     init() {
         /* Validate inputs on key press */
@@ -62,7 +57,7 @@ class RecipeApp {
         /* Listen for Add button click */
         ui.addRecipeBtn.addEventListener('click', this.addRecipe);
         /* Listen for view recipes button click */
-        ui.viewRecipesBtn.addEventListener('click', this.viewSavedRecipes);
+        ui.viewRecipesBtn.addEventListener('click', getRecipes);
     }
 }
 
