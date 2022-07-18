@@ -16,6 +16,6 @@ const saveRecipe = recipe => {
             ui.spinner('off');
             const inputEventItems = [ui.recipeTitleInput, ui.recipeAuthorInput, ui.recipeStepsInput];
             inputEventItems.forEach((item) => ui.validate(item, 'null'));
-            ui.toast(recipe.title);
+            ui.toast(recipe.title, 'Added');
         });
 }

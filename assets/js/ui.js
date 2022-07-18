@@ -50,8 +50,9 @@ class UI {
         }
     }
 
-    toast(title) {
-        document.querySelector('.toast-title').textContent = title;
+    toast(message, action) {
+        document.querySelector('.toast-title').textContent = message;
+        document.querySelector('.toast-action').textContent = action;
         const toast = document.querySelector('.toast')
         toast.classList.add('show');
 
