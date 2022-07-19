@@ -6,6 +6,7 @@ class UI {
         this.addRecipeBtn = document.querySelector('.add-recipe-btn');
         this.viewRecipesBtn = document.querySelector('.view-recipes-btn');
         this.cardHeader = document.querySelector('.card-header');
+        this.form = document.querySelector('form');
     }
 
 
@@ -108,7 +109,7 @@ class UI {
                                     </a>
     
                                     <a href="#" class="delete card-link" data-id="">
-                                        <i class="fa fa-remove"></i>
+                                        <i class="fa fa-trash"></i>
                                     </a>
                                 </div>
                             </div>

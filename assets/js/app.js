@@ -48,6 +48,18 @@ class RecipeApp {
         }
     }
 
+    editRecipe(e) {
+        if (e.target.classList.contains('edit')) {
+            console.log('edit');
+        }
+    }
+
+    deleteRecipe(e) {
+        if (e.target.classList.contains('delete')) {
+            console.log('delete');
+        }
+    }
+
     /* App Initializer */
     init() {
         /* Validate inputs on key press */
@@ -56,8 +68,15 @@ class RecipeApp {
 
         /* Listen for Add button click */
         ui.addRecipeBtn.addEventListener('click', this.addRecipe);
+
         /* Listen for view recipes button click */
         ui.viewRecipesBtn.addEventListener('click', getRecipes);
+
+        /* Listen for edit recipe button click */
+        ui.form.addEventListener('click', this.editRecipe);
+
+        /* Listen for delete recipe button click */
+        ui.form.addEventListener('click', this.deleteRecipe);
     }
 }
 
