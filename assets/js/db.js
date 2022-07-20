@@ -16,8 +16,8 @@ const saveRecipe = recipe => {
         .then(() => {
             ui.clearInput();
             ui.spinner('off');
-            const inputEventItems = [ui.recipeTitleInput, ui.recipeAuthorInput, ui.recipeStepsInput];
-            inputEventItems.forEach((item) => ui.validate(item, 'null'));
+            const inputEventItems = [document.querySelector('#recipe-title'), document.querySelector('#recipe-author'), document.querySelector('#recipe-steps')];
+            inputEventItems.forEach((item) => ui.validateInput(item, 'null'));
             ui.toast(recipe.title, 'Added');
         })
 

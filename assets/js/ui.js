@@ -106,9 +106,9 @@ class UI {
     }
 
     clearInput() {
-        this.recipeTitleInput.value = '';
-        this.recipeAuthorInput.value = '';
-        this.recipeStepsInput.value = '';
+        document.querySelector('#recipe-title').value = '';
+        document.querySelector('#recipe-author').value = '';
+        document.querySelector('#recipe-steps').value = '';
         document.querySelector('form').reset();
     }
 
