@@ -53,10 +53,6 @@ class RecipeApp {
         return
     }
 
-    deleteAllRecipes() {
-        return
-    }
-
     recipeFunc(e) {
         if (e.target.classList.contains('edit')) {
             this.editRecipe();
@@ -66,7 +62,7 @@ class RecipeApp {
             ui.changeState('add');
             // document.querySelector('.state').innerHTML = ui.addState;
         } else if (e.target.classList.contains('delete-all')) {
-            this.deleteAllRecipes()
+            deleteAllRecipes()
         }
     }
 

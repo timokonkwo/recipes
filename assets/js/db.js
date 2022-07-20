@@ -22,3 +22,7 @@ const saveRecipe = recipe => {
         })
 
 }
+
+const deleteAllRecipes = () => {
+    // To be done later
+};
