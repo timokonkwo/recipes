@@ -70,7 +70,9 @@ class UI {
             this.viewRecipesBtn.className = "back btn btn-primary rounded shadow-none mt-4 float-end";
             this.viewRecipesBtn.textContent = "Back"
 
-            window.onbeforeunload(() => console.log('hey'))
+            window.onbeforeunload = function() {
+                return "";
+            }
 
         }
     }
